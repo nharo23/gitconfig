@@ -1,0 +1,13 @@
+[color]
+      ui = true
+[alias]
+      sync = fetch --prune
+      co = checkout
+      br = branch
+      ci = commit
+      st = status
+      lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+      hash = log --pretty=format:'%Cred%h' -last -1
+      ll = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --name-only
+      fflist = "!f() { git diff --name-status develop $1; }; f"
+      who = "!f() { git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n; }; f"
