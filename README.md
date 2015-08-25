@@ -1,0 +1,2 @@
+# gitconfig
+useful git config
