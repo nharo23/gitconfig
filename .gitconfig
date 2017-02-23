@@ -12,3 +12,5 @@
       fflist = "!f() { git diff --name-status develop $1; }; f"
       who = "!f() { git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n; }; f"
       up = submodule foreach git pull origin master
+      re = remote -v
+      stream = "!f() { git pull upstream $1; }; f"
